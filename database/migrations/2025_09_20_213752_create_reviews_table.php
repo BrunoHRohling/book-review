@@ -23,7 +23,7 @@ return new class extends Migration
             // Create the foreign key for relationship between reviews and books tables
             $table->foreign('book_id')->references('id')->on('books')->onDelete('cascade');
 
-            // That line is another method to create a relationship between tables with default values, like 'book_id' automatically refers id column of books table
+            // That line is an alias for create a relationship between tables with default values, like 'book_id' automatically refers id column of books table
             //$table->foreignId('book_id')->constrained()->cascadeOnDelete();
         });
     }
